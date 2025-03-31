@@ -1,15 +1,16 @@
 import { InlineCode } from "@/once-ui/components";
+import { title } from "process";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Mohamed",
+  lastName: "Oucharrou",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Africa/Morocco", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French", "Arabic" ], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -29,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/MohamedxOU",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/oucharrou-mohamed/",
   },
   {
     name: "X",
@@ -44,7 +45,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:oucharroumohemed@gamil.com",
   },
 ];
 
@@ -52,11 +53,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Software Engineer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      University student pursuing a Diploma in Software Engineering<br/>Passionate about crafting seamless full-stack 
+      solutions<br/>from intuitive front-end interfaces to robust back-end systems.
     </>
   ),
 };
@@ -73,7 +74,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -81,14 +82,22 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m a Software Engineering student with a knack for solving problems through code.
+        Currently pursuing my diploma, I thrive in both front-end elegance (think React, JavaScript, and clean UIs) 
+        and back-end logic (Node.js, APIs, and databases).<br/>
+        <br/><br/>When I’m not debugging or studying, you’ll find me experimenting with new frameworks or contributing to open-source projects—because the best way to learn is to build.
+
+<br/><br/><InlineCode>What drives me?</InlineCode><br/>
+⚡ Bridging creativity with functionality to build apps that users love.<br/>
+⚡ The thrill of turning abstract ideas into scalable, real-world solutions.<br/>
+⚡ Collaborating with others to write code that’s as maintainable as it is powerful.<br/>
+
+Let’s connect and create something meaningful!
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -138,12 +147,12 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Faculty of Sciences and Techniques - Errachidia",
+        description: <>Software Engineering & Artificial Intelligence <InlineCode>Ongoing</InlineCode>.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Higher School of Technology (EST) - Meknes",
+        description: <>DUT Computer science <InlineCode>2024</InlineCode>.</>,
       },
     ],
   },
@@ -152,27 +161,22 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Front end (Next, React...)",
+        description: <>Build responsive UIs with React/Next.js. Focus on clean code and performance.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/next-projects/cover-next-01.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+         
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Backend (JAVA, C#...)",
+        description: <>Develop APIs and services in Java (Spring) and C# (.NET).</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -183,6 +187,24 @@ const about = {
           },
         ],
       },
+      
+      
+     
+
+      {
+        title : "Mobile (Flutter)",
+        description: <>Create cross-platform apps with Flutter and Dart.</>,
+        images: [
+          {
+            src: "/images/projects/project-01/cover-flutter-01.png",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          }
+        ],
+      },
+      
+
     ],
   },
 };
