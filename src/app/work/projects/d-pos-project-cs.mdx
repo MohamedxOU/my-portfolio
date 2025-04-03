@@ -1,0 +1,77 @@
+---
+title: "Modern Point of Sale System"
+publishedAt: "2024"
+summary: "A comprehensive retail management solution built with C# .NET and SQL Server for inventory control, sales processing, and business analytics."
+images:
+  - "/images/projects/cs-projects/cover-cs-01.png"
+  - "/images/projects/cs-projects/cover-cs-02.png"
+team:
+  - name: "[Your Name]"
+    role: "Full-stack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/yourprofile/"
+---
+
+## Overview
+
+ShopEase is a robust Point of Sale system designed for retail businesses, featuring inventory management, sales processing, and business intelligence capabilities. Built on the .NET framework with SQL Server backend, it combines desktop application reliability with enterprise-grade data management.
+
+## Key Features
+
+### 🛍️ Product Management
+- **Inventory Control**: Complete CRUD operations for products with categories and variants
+- **Barcode Integration**: Generate/scan EAN-13 barcodes with dedicated scanner support
+- **Stock Alerts**: Automatic low-stock notifications and reorder suggestions
+
+### 💰 Sales Processing
+- **Checkout System**: Fast transaction processing with multiple payment methods
+- **Receipt Generation**: Customizable receipts with business branding
+- **Returns Handling**: Complete return/refund workflow management
+
+### 📊 Reporting & Analytics
+- **Sales Reports**: Daily, weekly, and monthly performance dashboards
+- **Inventory Reports**: Stock movement and turnover analysis
+- **Export Capabilities**: Generate PDF/Excel reports for accounting
+
+### 🔒 System Security
+- **Role-based Access**: Admin, Manager, and Cashier permission levels
+- **Audit Trail**: Complete transaction history with user tracking
+- **Data Backup**: Automated SQL Server database backups
+
+## Technical Implementation
+
+### Frontend
+- **Windows Forms**: Responsive UI with modern controls
+- **DevExpress**: Enhanced data grids and reporting components
+- **Barcode Library**: ZXing.NET for barcode generation/scanning
+
+### Backend
+- **.NET 6**: Modern C# application framework
+- **Entity Framework**: ORM for database operations
+- **Dapper**: High-performance data access for reports
+
+### Database
+- **SQL Server 2022**: Enterprise-grade RDBMS
+- **Stored Procedures**: Optimized database operations
+- **Schema Design**: Normalized inventory/sales relationships
+
+```mermaid
+erDiagram
+    USER ||--o{ SALE : processes
+    SALE ||--|{ SALE_DETAIL : contains
+    PRODUCT ||--o{ SALE_DETAIL : referenced
+    CATEGORY ||--o{ PRODUCT : classifies
+    USER {
+        int UserID PK
+        string Username
+        string PasswordHash
+        string Role
+    }
+    PRODUCT {
+        int ProductID PK
+        string Name
+        string Barcode
+        decimal Price
+        int Stock
+        int CategoryID FK
+    }
