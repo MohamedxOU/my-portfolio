@@ -7,7 +7,6 @@ import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { ContactForm } from "@/components/Contactform";
 
 
 export async function generateMetadata() {
@@ -67,8 +66,9 @@ export default function Home() {
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
+            <Heading wrap="balance" variant="display-strong-l" className="text-sm" style={{ fontSize: "2.5rem" }}>
+              {/* {home.headline} */}
+              MOHAMED OUCHARROU
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
@@ -115,7 +115,7 @@ export default function Home() {
         </Flex>
       )}
       <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      {/* {newsletter.display && <Mailchimp newsletter={newsletter} />} */}
 
       
 

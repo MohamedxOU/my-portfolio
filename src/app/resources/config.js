@@ -6,12 +6,13 @@ const routes = {
   "/work": true,
   "/blog": true,
   "/gallery": true,
+  /* "/contact": true, */
 };
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+ 
 };
 
 const style = {
@@ -68,7 +69,9 @@ const display = {
 };
 
 const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+  title: "Get in Touch",
+  description: "Have a project in mind or want to collaborate? Send me a message and I'll get back to you as soon as possible.",
+  action: "",
   effects: {
     mask: {
       cursor: false,
@@ -106,4 +109,80 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL };
+const contact = {
+  display: true,
+  title: "Get in Touch",
+  description: "Have a project in mind or want to collaborate? Send me a message and I'll get back to you as soon as possible.",
+  
+  // Form action URL (if submitting to a server)
+  action: "",
+  
+  // Background effects configuration
+  effects: {
+    mask: {
+      cursor: "default",
+      x: "50%",
+      y: "50%",
+      radius: "100%"
+    },
+    gradient: {
+      display: true,
+      x: "50%",
+      y: "50%",
+      width: "100%",
+      height: "100%",
+      tilt: 0,
+      colorStart: "var(--color-primary)",
+      colorEnd: "var(--color-secondary)",
+      opacity: 20
+    },
+    dots: {
+      display: true,
+      color: "var(--color-neutral-light)",
+      size: 1,
+      opacity: 30
+    },
+    grid: {
+      display: false,
+      color: "var(--color-neutral-medium)",
+      width: 20,
+      height: 20,
+      opacity: 10
+    },
+    lines: {
+      display: true,
+      opacity: 15
+    }
+  },
+  
+  // Form fields configuration (optional)
+  fields: {
+    name: {
+      placeholder: "Your Name",
+      required: true
+    },
+    email: {
+      placeholder: "Your Email",
+      required: true
+    },
+    message: {
+      placeholder: "Your Message",
+      required: true,
+      rows: 4
+    }
+  },
+  
+  // Success/error messages (optional)
+  messages: {
+    success: "Thank you for your message! I'll get back to you soon.",
+    error: "There was an error sending your message. Please try again later."
+  },
+  
+  // Submit button configuration (optional)
+  submit: {
+    text: "Send Message",
+    loadingText: "Sending..."
+  }
+};
+
+export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL, contact };

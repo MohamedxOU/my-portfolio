@@ -55,7 +55,7 @@ const User = forwardRef<HTMLDivElement, UserProps>(
             )}
             {loading ? (
               <Flex paddingY="4">
-                <Skeleton width="l" height="xs" shape="line" aria-label="Loading subline" />
+                <Skeleton width="xl" height="xs" shape="line" aria-label="Loading subline" />
               </Flex>
             ) : (
               <Text wrap="nowrap" variant="body-default-xs" onBackground="neutral-weak">

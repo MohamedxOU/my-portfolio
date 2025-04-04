@@ -1,5 +1,6 @@
 import { InlineCode } from "@/once-ui/components";
 import { title } from "process";
+import { display } from "./config";
 
 const person = {
   firstName: "Mohamed",
@@ -8,7 +9,7 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Software Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.png",
   location: "Africa/Morocco", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "French", "Arabic" ], // optional: Leave the array empty if you don't want to display languages
 };
@@ -23,6 +24,16 @@ const newsletter = {
     </>
   ),
 };
+
+const contactInfos ={
+  display: true,
+  title: "Get in touch",
+  description: (
+    <>
+      Have a project in mind or want to collaborate? Send me a message and I'll get back to you as soon as possible.
+    </>
+  )
+}
 
 const social = [
   // Links are automatically displayed.
@@ -53,10 +64,10 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Software Engineer</>,
+  headline: <>MOHAMED OUCHARROU</>,
   subline: (
     <>
-      University student pursuing a Diploma in Software Engineering<br/>Passionate about crafting seamless full-stack 
+      University student pursuing a Diploma in Software Engineering & Artificial Intelligence Passionate about crafting seamless full-stack 
       solutions<br/>from intuitive front-end interfaces to robust back-end systems.
     </>
   ),
@@ -175,12 +186,12 @@ Let’s connect and create something meaningful!
         ],
       },
       {
-        title: "Backend (JAVA, C#...)",
-        description: <>Develop APIs and services in Java (Spring) and C# (.NET).</>,
+        title: "Backend (PHP, C#...)",
+        description: <>Develop APIs and services in PHP (Laravel) and C# (.NET).</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/php/php-01.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -232,76 +243,51 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
+      src: "/images/projects/cs-projects/cover-cs-01.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
+      src: "/images/projects/flutter-projects/cover-flutter-01.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
+      src: "/images/projects/flutter-projects/cover-flutter-02.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
+      src: "/images/projects/flutter-projects/cover-flutter-03.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-08.jpg",
+      src: "/images/projects/flutter-projects/cover-flutter-04.png",
       alt: "image",
-      orientation: "vertical",
+      orientation: "horizontal",
     },
+    
     {
-      src: "/images/gallery/img-09.jpg",
+      src: "/images/projects/next-projects/cover-next-01.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-10.jpg",
+      src: "/images/projects/next-projects/cover-next-02.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
+      src: "/images/projects/next-projects/cover-next-03.png",
       alt: "image",
       orientation: "horizontal",
     },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
+    
+    
+    
   ],
 };
+
 
 export { person, social, newsletter, home, about, blog, work, gallery };
