@@ -1,4 +1,4 @@
-# 🧠 Personal Portfolio – [Your Full Name]
+# 🧠 Personal Portfolio – OUCHARROU MOHAMED
 
 Welcome to my personal portfolio! I’m a **Software Engineering & AI student**, freelance developer, and passionate problem-solver. This repository showcases my work, projects, and blog posts related to software development, algorithms, artificial intelligence, and web/mobile apps.
 
